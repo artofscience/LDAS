@@ -1,2 +1,1 @@
-# LDAS
-Linear Dependency Aware Solver (LDAS)
+# Linear Dependency Aware Solver (LDAS)
