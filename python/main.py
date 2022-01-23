@@ -1,21 +1,20 @@
 import numpy as np
 
-from alg import AXB
+from ldas import ldas
 
-A = np.array([[2, 0],
+K = np.array([[2, 0],
               [0, 2]], dtype=float)
 
-B = np.array([[0, 1, 2, 0, 0, 5],
+F = np.array([[0, 1, 2, 0, 0, 5],
               [0, 0, 2, 0, 1, 2]], dtype=float)
 
-X = np.zeros_like(B)
-Bbasis = []
-Xbasis = []
+U = np.zeros_like(F)
+F_basis = []
+U_basis = []
 
-AXB(A, B, X, Bbasis, Xbasis)
+ldas(K, F, U, F_basis, U_basis)
 
-print(Bbasis)
-print(Xbasis)
-print(B)
-print(X)
-
+print(F)
+print(U)
+print(F_basis)
+print(U_basis)

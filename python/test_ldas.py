@@ -1,16 +1,18 @@
-import alg
-import numpy as np
 import unittest
+
+import numpy as np
+
+from ldas import ldas as LDAS
 
 
 class TestAlg(unittest.TestCase):
 
-    def solve(self, A, B, B_, X_):
-        expected = np.linalg.solve(A, B)
-        X = np.zeros_like(B)
-        result = alg.AXB(A, B, X, B_, X_)
+    def solve(self, K, F, FF, UU):
+        expected = np.linalg.solve(K, F)
+        X = np.zeros_like(F)
+        result = LDAS(K, F, X, FF, UU)
 
-        for i in range(B.shape[1]):
+        for i in range(F.shape[1]):
             msg = ('\nExpect:\t{expected[:, i]},\nResult:\t{result[:, i]}'
                    '\nFor A={A} with rhs={B[:, i]}')
 
