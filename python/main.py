@@ -14,7 +14,7 @@ U_basis = []
 
 ldas(K, F, U, F_basis, U_basis)
 
-print(F)
-print(U)
-print(F_basis)
-print(U_basis)
+print(f"Force vector F:\n{F}")
+print(f"State vector U:\n{U}")
+print(f"Basis vectors F:\n{F_basis}")
+print(f"Basis vectors U:\n{U_basis}")

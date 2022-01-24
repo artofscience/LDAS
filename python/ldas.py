@@ -14,7 +14,7 @@ def ldas(K, F, U, FF, UU, tol=1e-6):
         if np.linalg.norm(r) < tol:
             U[:, i] = np.dot(d, np.asarray(UU))
             continue
-        print("solve for load {:d}".format(i))
+        print(f"Solve for load: {i}...")
         FF.append(r)
         UU.append(np.linalg.solve(K, r))
         U[:, i] = UU[-1] + np.dot(d, np.asarray(UU[:-1]))
